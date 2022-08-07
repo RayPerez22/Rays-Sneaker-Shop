@@ -1,6 +1,6 @@
 const kicksData = [
-    {name: "Air Jordan 11", img: "https://images.solecollector.com/complex/image/upload/c_fill,f_auto,fl_lossy,q_auto,w_1100/kdik1iodpoi4jwisxksu.jpg"},
-    {name: "Air Jordan 11", img: "https://images.solecollector.com/complex/image/upload/c_fill,f_auto,fl_lossy,q_auto,w_1100/ky8a3e2plrbzn36xpltz.jpg"}
+    {name: "Air Jordan 4", img: "https://cdn.flightclub.com/1000/TEMPLATE/139813/1.jpg"},
+    {name: "Air Jordan 11", img: "https://cdn.flightclub.com/1800/TEMPLATE/248952/1.jpg"}
 ]
 
 module.exports = kicksData
