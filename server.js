@@ -6,6 +6,7 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const Kicks = require('./models/Kicks.js')
 const kicksData = require('./utilities/kicksData')
+app.use(express.static('public'))
 
 //DB connection
 mongoose.connect(process.env.MONGO_URI)
@@ -59,9 +60,10 @@ app.get('/Kicks/new', (req, res) =>{
 
 //show route
 app.get('/Kicks/:id', (req, res) => {
+    console.log(req.params.id)
     Kicks.findById(req.params.id, (err, foundKicks) => {
         res.render('Show', {
-            Kicks: foundKicks
+            kicks: foundKicks
         })
     })
 })
@@ -78,7 +80,7 @@ app.get('/Kicks/:id/edit', (req, res) => {
     Kicks.findById(req.params.id, (error, foundKicks) => {
         if(!error) {
             res.render('Edit', {
-                Kicks: foundKicks
+                kicks: foundKicks
             })
         }else {
             res.send({

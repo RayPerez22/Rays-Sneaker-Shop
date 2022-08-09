@@ -1,0 +1,12 @@
+* {
+    background-color: aqua;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}

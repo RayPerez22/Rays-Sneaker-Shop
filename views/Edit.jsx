@@ -6,7 +6,7 @@ class New extends React.Component {
     return (
       <html>
         <head>
-            {/* <link rel="stylesheet" href="/index.css" /> */}
+            <link rel="stylesheet" href="/index.css" />
         </head>
         <div>
             <h1>Ray's Sneaker</h1>

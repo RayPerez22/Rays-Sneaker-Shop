@@ -7,6 +7,7 @@ class Index extends React.Component {
             <html lang="en">
             <head>
                 <title>Ray's Sneakers</title>
+                <link rel="stylesheet" href="/index.css" />
             </head>
             <body>
                 <div>
@@ -16,7 +17,9 @@ class Index extends React.Component {
                     {Kicks.map((Kicks) => {
                         return(
                             <li>
-                                <a href={`/Kicks/${Kicks.id}`}></a>
+                                <h2>{Kicks.name}</h2>
+                                <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
+                                
                                 <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
                                 <a href={`/Kicks/${Kicks.id}/edit`}>Edit</a>
                             </li>

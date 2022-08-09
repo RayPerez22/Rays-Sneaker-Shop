@@ -5,15 +5,15 @@ class New extends React.Component {
     return (
       <html>
         <head>
-            {/* <link rel="stylesheet" href="/index.css" /> */}
+            <link rel="stylesheet" href="/index.css" />
         </head>
         <div>
             <h1>Ray's Sneakers</h1>
             {/* NOTE: action will be the route, method will be the HTTP verb */}
-            <form action="/Kicks" method="POST">
+            <form action="/Kicks/" method="POST">
               Name: <input type="text" name="name" /><br/>
-              Image URL: <input type="text" img="img"/><br/>
-              <input type="submit" name="" img="" value="Add Sneaker"/>
+              Image URL: <input type="text" name="img"/><br/>
+              <input type="submit" name="" value="Add Sneaker"/>
             </form>
             <a href="/Kicks">Back</a>
         </div>
