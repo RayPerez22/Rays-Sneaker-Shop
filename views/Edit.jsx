@@ -1,8 +1,8 @@
 const React = require('react')
 
-class New extends React.Component {
+class Edit extends React.Component {
   render() {
-    const Kicks = this.props.Kicks
+    const { Kicks } = this.props
     return (
       <html>
         <head>
@@ -11,9 +11,9 @@ class New extends React.Component {
         <div>
             <h1>Ray's Sneaker</h1>
             {/* NOTE: action will be the route, method will be the HTTP verb */}
-            <form action={`/Kicks/${Kicks.id}?_method=PUT`} Method="POST">
-              Name: <input type="text" name="name" /><br/>
-              Image URL: <input type="text" img="img"/><br/>
+            <form action={`/kicks/${Kicks.id}?_method=PUT`} Method="POST">
+              Name: <input value={Kicks.name} type="text" name="name" /><br/>
+              Image URL: <input value={Kicks.img} type="text" img="img"/><br/>
               <input type="submit" name="" img="" value="Add Sneaker"/>
             </form>
             <a href="/Kicks">Back</a>
@@ -23,4 +23,4 @@ class New extends React.Component {
     }
   }
 
-module.exports = New
+module.exports = Edit

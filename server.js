@@ -81,7 +81,7 @@ app.get('/Kicks/:id/edit', (req, res) => {
     Kicks.findById(req.params.id, (error, foundKicks) => {
         if(!error) {
             res.render('Edit', {
-                kicks: foundKicks
+                Kicks: foundKicks
             })
         }else {
             res.send({

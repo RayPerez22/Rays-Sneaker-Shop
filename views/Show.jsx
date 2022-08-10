@@ -2,7 +2,7 @@ const React = require('react')
 // const Kicks = require('../models/Kicks')
 class Show extends React.Component {
   render () {
-   const {kicks} = this.props
+   const { kicks } = this.props
    console.log(kicks)
     return (
       <html>
