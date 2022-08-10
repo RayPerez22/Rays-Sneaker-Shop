@@ -10,3 +10,8 @@ img {
 ul {
     list-style-type: none;
 }
+
+.site {
+    display: grid;
+    grid-auto-flow: column;
+}

@@ -25,10 +25,10 @@ app.use((req, res, next) => {
  })
 
  //seed
- app.get('/Kicks/seed', (req, res) => {
-    Kicks.create(kicksData)
-    res.redirect('/Kicks')
- })
+//  app.get('/Kicks/seed', (req, res) => {
+//     Kicks.create(kicksData)
+//     res.redirect('/Kicks')
+//  })
 
 //setting up our views
 app.set('view engine', 'jsx')
@@ -54,6 +54,7 @@ app.post('/Kicks/', (req, res) => {
     })
 })
 
+//new
 app.get('/Kicks/new', (req, res) =>{
     res.render('New')
 })

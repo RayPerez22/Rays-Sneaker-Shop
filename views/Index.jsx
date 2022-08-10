@@ -13,10 +13,10 @@ class Index extends React.Component {
                 <div>
                     <h1>Ray's Sneakers</h1>
                 </div>
-                <ul>
+                {/* <ul>
                     {Kicks.map((Kicks) => {
                         return(
-                            <li>
+                            <li class="site">
                                 <h2>{Kicks.name}</h2>
                                 <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
                                 
@@ -25,7 +25,27 @@ class Index extends React.Component {
                             </li>
                         )
                     })}
-                </ul>
+                </ul> */}
+                <div>                   
+                    {Kicks.map((Kicks) => {
+                        return(
+                            <div class="site">
+                                <divname>
+                                <h2>{Kicks.name}</h2> 
+                                </divname>
+                                <divimg>
+                                    <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
+                                </divimg>
+                                <divbtn1>
+                                    <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
+                                </divbtn1>
+                                <divbtn2>
+                                    <a href={`/Kicks/${Kicks.id}/edit`}>Edit</a>
+                                </divbtn2>
+                            </div>
+                        )
+                    })}                
+                </div>
                 <nav>
                     <a href="/Kicks/new">Create a new Sneaker</a>
                 </nav>
