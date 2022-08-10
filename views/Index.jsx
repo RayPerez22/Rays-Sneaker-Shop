@@ -9,39 +9,24 @@ class Index extends React.Component {
                 <title>Ray's Sneakers</title>
                 <link rel="stylesheet" href="/index.css" />
             </head>
-            <body>
-                <div>
-                    <h1>Ray's Sneakers</h1>
-                </div>
-                {/* <ul>
-                    {Kicks.map((Kicks) => {
-                        return(
-                            <li class="site">
-                                <h2>{Kicks.name}</h2>
-                                <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
-                                
-                                <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
-                                <a href={`/Kicks/${Kicks.id}/edit`}>Edit</a>
-                            </li>
-                        )
-                    })}
-                </ul> */}
+            <body>               
+                <header>Ray's Sneakers</header>                           
                 <div>                   
                     {Kicks.map((Kicks) => {
                         return(
                             <div class="site">
-                                <divname>
+                                <div>
                                 <h2>{Kicks.name}</h2> 
-                                </divname>
-                                <divimg>
+                                </div>
+                                <div>
                                     <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
-                                </divimg>
-                                <divbtn1>
+                                </div>
+                                <div>
                                     <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
-                                </divbtn1>
-                                <divbtn2>
+                                </div>
+                                <div>
                                     <a href={`/Kicks/${Kicks.id}/edit`}>Edit</a>
-                                </divbtn2>
+                                </div>
                             </div>
                         )
                     })}                

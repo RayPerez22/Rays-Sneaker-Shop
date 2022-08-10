@@ -36,7 +36,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 //our routes
 app.get('/',(req, res) =>{
-    res.send("Welcome to the Ray's Sneaker Shop!")
+    res.render('Home')
 })
 
 app.get('/Kicks/', (req, res) =>{

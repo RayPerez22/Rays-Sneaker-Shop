@@ -1,5 +1,5 @@
 * {
-    background-color: aqua;
+    background-color: rgb(201, 242, 242);
 }
 
 img {
@@ -14,4 +14,18 @@ ul {
 .site {
     display: grid;
     grid-auto-flow: column;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.homebutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130%;
 }
