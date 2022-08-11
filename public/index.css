@@ -1,9 +1,11 @@
-* {
+/* * {
     background-color: rgb(201, 242, 242);
+} */
+body {
+    height: auto;
 }
-
 img {
-    width: 300px;
+    width: 17vw;
     height: auto;
 }
 
@@ -13,8 +15,36 @@ ul {
 
 .site {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns:2fr 1fr;
+    grid-template-areas:"header header"
+                        "title sidebar"
+                        "main sidebar"
+                        "footer footer";
+    grid-gap:10px; margin:20px; padding:10px; border:solid 2px #000;
 }
+
+.site > *{padding:30px; color:#fff; font-size:20px;}
+
+.mastheader{background:lightskyblue; grid-area:header;}
+
+.page-title{background:lightsteelblue; grid-area:title;}
+
+.main-content{
+    background:lightgray; grid-area:main;
+    min-height:500px;
+    display: flex;
+    width: 60vw;
+    flex-wrap: wrap;
+    column-gap: 1vw;
+    row-gap: 2vw;
+    justify-content: space-evenly;
+    margin-bottom: auto;
+
+}
+
+.sidebar{background:lightslategray; grid-area:sidebar;}
+
+.footer{background:lightblue; grid-area:footer;}
 
 .home {
     display: flex;
@@ -28,4 +58,30 @@ ul {
     align-items: center;
     justify-content: center;
     height: 130%;
+}
+
+.sneakername {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+header {
+    font-size: 40px;
+}
+
+.product {
+    width: 17vw;
+    height: auto;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form {
+    width: fit-content;
 }
