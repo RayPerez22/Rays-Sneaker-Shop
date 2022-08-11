@@ -12,6 +12,9 @@ img {
 ul {
     list-style-type: none;
 }
+h1 {
+
+}
 
 .site {
     display: grid;
@@ -42,7 +45,9 @@ ul {
 
 }
 
-.sidebar{background:lightslategray; grid-area:sidebar;}
+.sidebar{
+    background:lightslategray; grid-area:sidebar;
+}
 
 .footer{background:lightblue; grid-area:footer;}
 
@@ -81,6 +86,12 @@ header {
     justify-content: space-between;
     width: 100%;
 }
+
+/* .createbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 form {
     width: fit-content;

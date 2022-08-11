@@ -10,8 +10,9 @@ class Index extends React.Component {
                 <title >Ray's Sneakers</title>
             </head>
             <body className="site">               
-                <header className="mastheader">Ray's Sneakers</header>
-                 <h1  className="page-title">Air Jordans</h1>                       
+                <header className="mastheader"><a href='/'>Ray's Sneakers Shop</a></header>
+                 <h1  className="page-title">Air Jordans</h1>
+                                      
                 <main className="main-content">                   
                     {Kicks.map((Kicks) => {
                         return(
@@ -24,8 +25,8 @@ class Index extends React.Component {
                                 </div>
                                 <div className='buttons'>
                                     <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
-                                    <a href={`/Kicks/${Kicks.id}/edit`}>Edit</a>
-                                    <button>Add to cart</button>
+                                    <a href={`/Kicks/${Kicks.id}/edit`}><button>Edit</button></a>
+                                    <button>Add to Cart</button>
                                 </div>
                                 <div>
                                     
@@ -34,10 +35,10 @@ class Index extends React.Component {
                         )
                     })}                
                 </main>
-                <aside className="sidebar"></aside>
+                <aside className="sidebar"><a href="/Kicks/new" className="sidebar"><button>Create a new Sneaker</button></a></aside>
                 <footer className="footer"></footer>
                 <nav>
-                    <a href="/Kicks/new">Create a new Sneaker</a>
+                
                 </nav>
             </body>
             </html>

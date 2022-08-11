@@ -24,11 +24,11 @@ app.use((req, res, next) => {
     next();
  })
 
- //seed
-//  app.get('/Kicks/seed', (req, res) => {
-//     Kicks.create(kicksData)
-//     res.redirect('/Kicks')
-//  })
+//  seed
+ app.get('/Kicks/seed', (req, res) => {
+    Kicks.create(kicksData)
+    res.redirect('/Kicks')
+ })
 
 //setting up our views
 app.set('view engine', 'jsx')
