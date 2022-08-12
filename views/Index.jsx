@@ -26,7 +26,14 @@ class Index extends React.Component {
                                 <div className='buttons'>
                                     <form action={`/Kicks/${Kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
                                     <a href={`/Kicks/${Kicks.id}/edit`}><button>Edit</button></a>
-                                    <button>Add to Cart</button>
+                                    {Kicks.stock ?
+                                        <div>
+                                            <button>Add to Cart</button>
+                                            <h3>{Kicks.price}</h3>
+                                        </div> :
+                                        <h3>OUT OF STOCK</h3>
+                                    }
+                                    
                                 </div>
                                 <div>
                                     

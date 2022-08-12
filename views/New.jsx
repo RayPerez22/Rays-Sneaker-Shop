@@ -13,6 +13,14 @@ class New extends React.Component {
             <form action="/Kicks/" method="POST">
               Name: <input type="text" name="name" /><br/>
               Image URL: <input type="text" name="img"/><br/>
+              Stock: <select name="" id="">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select><br/>
+              price: <input type="text" name="price" value="$"/><br/>
               <input type="submit" name="" value="Add Sneaker"/>
             </form>
             <a href="/Kicks">Back</a>
