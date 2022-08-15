@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 
 //  seed
  app.get('/Kicks/seed', (req, res) => {
+    // Kicks.findByIdAndDelete{}
     Kicks.create(kicksData)
     res.redirect('/Kicks')
  })

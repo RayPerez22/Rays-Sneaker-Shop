@@ -7,18 +7,36 @@ class Show extends React.Component {
     return (
       <html>
         <head>
-            <title>Ray's Sneakers</title>
+            <title>Ray's Sneakers Shop</title>
             <link rel="stylesheet" href="/index.css" />
         </head>
-        <body>
-        <div>
-          <h1>Ray's Sneakers</h1>
-          <h2>{kicks.name}</h2>
-          <img src={`${kicks.img}`}></img>
-          <form action={`/Kicks/${kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
-          <a href={`/kicks/`}>Back</a>
-          
-        </div>
+        <body className="site">
+          <header className="mastheader"><a href='/' className="mastheader">Ray's Sneakers Shop</a></header>
+          <h1 className="page-title">Ray's Sneakers Shop</h1>
+        <main className="main-content">
+          <div className='product'>
+            <div className='sneakername'>
+              <h2>{kicks.name}</h2>
+              </div>                      
+              <img src={kicks.img} id="img"></img>
+            <div className='buttons-div'>
+              <form action={`/Kicks/${kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
+              {kicks.stock ?
+                <div className='show-price'><h3 >{kicks.price}</h3></div> :
+                <div className='out-of-stock'><h3>OUT OF STOCK</h3></div>
+              }
+              
+              
+              
+            </div>             
+          </div>  
+        </main>
+        <aside className="sidebar">
+          <button><a href={`/kicks/`}>Back</a></button>
+          <p id='description'>{kicks.description}</p>
+          {console.log(kicks.description)}
+          </aside>
+        <footer className="footer"></footer>
         </body>       
       </html>
       )
