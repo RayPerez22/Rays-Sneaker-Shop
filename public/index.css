@@ -1,6 +1,13 @@
 body {
     height: auto;
 }
+
+.homestyle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 img {
     width: 17vw;
     height: auto;
@@ -31,16 +38,50 @@ img {
     background:#EB1D36; 
     grid-area:header;
     color: #F5EDDC;
-    text-decoration:none
+    text-decoration:none;   
 }
 
-.page-title{background:#A2B5BB; grid-area:title;}
+#mastheader {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    /* padding: .75rem; */
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.page-title{
+    background:#A2B5BB; grid-area:title;
+    max-height: 7vh;
+}
 
 .main-content{
     background:#CFD2CF; grid-area:main;
     min-height:500px;
     display: flex;
-    width: 60vw;
+    width: 65vw;
     flex-wrap: wrap;
     column-gap: 1vw;
     row-gap: 2vw;
@@ -48,8 +89,45 @@ img {
 
 }
 
+.main-content img {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    /* padding: .75rem; */
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+} 
+
 .sidebar{
     background:#F5EDDC; grid-area:sidebar;
+    overflow: auto;
+    max-height: 70vh;
+}
+
+#sidebar {
+    min-height: 173vh;
 }
 
 .footer{background:#EB1D36; grid-area:footer;}
@@ -65,7 +143,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 130%;
+    height: 10vh;
+    width: 15vw;
+    
 }
 
 .sneakername {
@@ -76,6 +156,9 @@ img {
 
 header {
     font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product {
@@ -93,9 +176,15 @@ header {
     align-content: center;
 }
 
+.shoe .buttons-div {
+    justify-content: space-evenly;
+}
+
+.shoe img {
+    margin-bottom: 2vh;
+}
+
 .buttons {
-    /* width: 4vw;
-    height: 4vh; */
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -134,13 +223,41 @@ header {
 .buttons:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
+
+.sneakerlogo {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    /* padding: .75rem; */
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
 .buttons a {
     height: 2vh;
 }
-
-/* #buy-button {
-    margin-top: 2vh;
-} */
 
 form {
     width: fit-content;
@@ -154,32 +271,18 @@ form {
     right: 2vw;
     top: 15px;
 }
-.out-of-stock {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: -12vw;
-    top: -44vh;
-}
+
 .show-price {
     display: flex;
     justify-content: center;
-    position: relative;
-    right: -10vw;
-    top: -50vh;
+    position: absolute;
+    right: -93px;
+    top: 50px;
 }
 
 .show-price h3 {
     font-size: 50px;
 
-}
-
-.index-oos {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: -2vw;
-    top: -28vh;
 }
 
 p {
@@ -200,4 +303,16 @@ a {
     position: absolute;
     top: -3px;
     right: 15px;
+}
+
+.shoe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.kicksname {
+    height: 5vh;
 }

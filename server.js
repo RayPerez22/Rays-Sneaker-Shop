@@ -70,6 +70,13 @@ app.get('/Kicks/:id', (req, res) => {
     })
 })
 
+app.put('/Kicks/:id/buy', (req, res) => {
+    Kicks.findByIdAndUpdate(req.params.id, { $inc: { stock: -1 } },
+         (error, kicks) => {
+        res.redirect(`/Kicks/${req.params.id}`)
+    })
+})
+
 //delete
 app.delete('/Kicks/:id', (req, res) => {
     Kicks.findByIdAndRemove(req.params.id, (err,data) => {

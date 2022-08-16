@@ -8,7 +8,7 @@ class New extends React.Component {
             <link rel="stylesheet" href="/index.css" />
         </head>
         <body className="site">
-          <header className="mastheader"><a href='/' className="mastheader">Ray's Sneakers Shop</a></header>
+        <header className="mastheader"><a href='/' className="mastheader" ><img src="/images/Logo.png" alt="" id='mastheader'/></a></header>
           <h1 className="page-title">Ray's Sneakers Shop</h1>
           <main className="main-content">
             <form action="/Kicks/" method="POST">

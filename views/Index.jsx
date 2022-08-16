@@ -14,7 +14,7 @@ class Index extends React.Component {
                 <title >Ray's Sneakers Shop</title>
             </head>
             <body className="site">               
-                <header className="mastheader"><a href='/' className="mastheader">Ray's Sneakers Shop</a></header>
+                <header className="mastheader"><a href='/' className="mastheader" ><img src="/images/Logo.png" alt="" id='mastheader'/></a></header>
                  <h1  className="page-title">Air Jordans</h1>
                                       
                 <main className="main-content">                   
@@ -46,18 +46,15 @@ class Index extends React.Component {
 
                                     </div>
                                     <div>
-                                    <button className='buttons' id='buy-button'>BUY</button>
+                                        <form action={`/Kicks/${Kicks.id}/buy?_method=PUT`}method='POST'><button className='buttons' id='buy-button'>BUY</button></form>
                                     </div>
-                                    
-                                </div>
-                                <div>
                                     
                                 </div>
                             </div>
                         )
                     })}                
                 </main>
-                <aside className="sidebar">
+                <aside className="sidebar" id='sidebar'>
                     <a href="/Kicks/new" className="sidebar"><button className='buttons'>Create a new Sneaker</button></a>
                     <p>Air Jordan is a line of basketball shoes and athletic clothing produced by American corporation Nike. The first Air Jordan shoe was produced for Hall of Fame former basketball player Michael Jordan during his time with the Chicago Bulls in late 1984 and released to the public on April 1, 1985. The shoes were designed for Nike by Peter Moore, Tinker Hatfield, and Bruce Kilgore.</p>
                     </aside>

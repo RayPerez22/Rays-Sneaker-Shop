@@ -9,20 +9,31 @@ class Show extends React.Component {
             <link rel="stylesheet" href="/index.css" />
         </head>
         <body className="site">
-          <header className="mastheader"><a href='/' className="mastheader">Ray's Sneakers Shop</a></header>
+        <header className="mastheader"><a href='/' className="mastheader" ><img src="/images/Logo.png" alt="" id='mastheader'/></a></header>
           <h1 className="page-title">Ray's Sneakers Shop</h1>
         <main className="main-content">
-          <div className='product'>
+          <div className='product shoe'>
             <div className='sneakername'>
-              <h2>{kicks.name}</h2>
+              <h2 className='kicksname'>{kicks.name}</h2>
               </div>                      
               <img src={kicks.img} id="img"></img>
             <div className='buttons-div'>
               <form action={`/Kicks/${kicks.id}?_method=DELETE`}method='POST'><button type='submit' className='buttons'>Delete</button></form>
+
               {kicks.stock ?
-                <div className='show-price'><h3 >{kicks.price}</h3></div> :
-                <div className='out-of-stock'><h3>OUT OF STOCK</h3></div>
+              <>
+                <form action={`/Kicks/${kicks.id}/buy?_method=PUT`}method='POST'><button className='buttons' id='showbuy-button'>BUY</button></form>
+                <div className='show-price'><h3 >{kicks.price}</h3></div>
+              </>
+                : <div className='show-price'><h3>SOLD OUT</h3></div>
               }              
+            </div>
+            <div>
+              {kicks.stock ?
+              <h2 className='kicksname'>IN STOCK: {kicks.stock}</h2> :
+              <h2 className='kicksname'>SOLD OUT</h2>
+              }
+                
             </div>             
           </div>  
         </main>

@@ -7,12 +7,15 @@ class Home extends React.Component {
         <head>
             <link rel="stylesheet" href="/index.css" />
         </head>
-        <div class='home'>
-            <h1>Ray's Sneakers Shop</h1>
-        </div>
-        <div id='homebutton' className='buttons'>
-            <a href="/Kicks">Enter</a>
-        </div>
+        <body className='homestyle'>
+          <div class='home'>
+            <img src="/images/Logo.png" alt="" className='sneakerlogo'/>
+          </div>
+          <div id='homebutton' className='buttons'>
+              <a href="/Kicks">Enter</a>
+          </div>
+        </body>
+       
       </html>
       )
     }
