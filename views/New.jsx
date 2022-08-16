@@ -2,7 +2,6 @@ const React = require('react')
 
 class New extends React.Component {
   render() {
-    const { kicks } = this.props
     return (
       <html>
         <head>
@@ -22,7 +21,7 @@ class New extends React.Component {
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select><br/>
-              price: <input type="text" name="price" value="$"/><br/>
+              Price: <input type="text" name="price" value="$"/><br/>
               <p><label for="description">Description:</label></p>               
               <textarea name="description" id="description" cols="30" rows="10"></textarea><br />
               <input type="submit" name="" value="Add Sneaker" className='buttons'/>
@@ -37,5 +36,5 @@ class New extends React.Component {
       )
     }
   }
-{/* description: <input type="text" name='description'/><br/> */}
+
 module.exports = New

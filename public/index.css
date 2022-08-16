@@ -4,14 +4,15 @@ body {
 img {
     width: 17vw;
     height: auto;
+    position: relative;
 }
 #img {
     width: 30vw;
     height: auto;
 }
-ul {
+/* ul {
     list-style-type: none;
-}
+} */
 
 .site {
     display: grid;
@@ -21,6 +22,7 @@ ul {
                         "main sidebar"
                         "footer footer";
     gap:5px ; margin:10px; padding:10px; border:solid 2px #000;
+    margin-bottom: -10vh;
 }
 
 .site > *{padding:30px; color:#fff; font-size:20px;}
@@ -43,7 +45,7 @@ ul {
     column-gap: 1vw;
     row-gap: 2vw;
     justify-content: space-evenly;
-    margin-bottom: auto;
+
 }
 
 .sidebar{
@@ -139,11 +141,6 @@ header {
 /* #buy-button {
     margin-top: 2vh;
 } */
-/* .createbutton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 form {
     width: fit-content;
@@ -153,11 +150,17 @@ form {
 .price {
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
     right: 2vw;
-    top: -30vh;
+    top: 15px;
 }
-
+.out-of-stock {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: -12vw;
+    top: -44vh;
+}
 .show-price {
     display: flex;
     justify-content: center;
@@ -171,13 +174,6 @@ form {
 
 }
 
-.out-of-stock {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: -12vw;
-    top: -44vh;
-}
 .index-oos {
     display: flex;
     justify-content: center;
@@ -188,9 +184,20 @@ form {
 
 p {
     color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
     text-decoration: none;
     color: #41403e;
+}
+
+#description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.price-tag {
+    position: absolute;
+    top: -3px;
+    right: 15px;
 }

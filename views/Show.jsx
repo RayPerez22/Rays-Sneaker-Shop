@@ -1,9 +1,7 @@
 const React = require('react')
-// const Kicks = require('../models/Kicks')
 class Show extends React.Component {
   render () {
    const { kicks } = this.props
-   console.log(kicks)
     return (
       <html>
         <head>
@@ -20,21 +18,18 @@ class Show extends React.Component {
               </div>                      
               <img src={kicks.img} id="img"></img>
             <div className='buttons-div'>
-              <form action={`/Kicks/${kicks.id}?_method=DELETE`}method='POST'><button type='submit'>Delete</button></form>
+              <form action={`/Kicks/${kicks.id}?_method=DELETE`}method='POST'><button type='submit' className='buttons'>Delete</button></form>
               {kicks.stock ?
                 <div className='show-price'><h3 >{kicks.price}</h3></div> :
                 <div className='out-of-stock'><h3>OUT OF STOCK</h3></div>
-              }
-              
-              
-              
+              }              
             </div>             
           </div>  
         </main>
         <aside className="sidebar">
-          <button><a href={`/kicks/`}>Back</a></button>
+          <button className='buttons'><a href={`/kicks/`}>Back</a></button><br />
           <p id='description'>{kicks.description}</p>
-          </aside>
+        </aside>
         <footer className="footer"></footer>
         </body>       
       </html>

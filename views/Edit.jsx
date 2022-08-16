@@ -22,7 +22,7 @@ class Edit extends React.Component {
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select><br/>
-              price: <input type="text" name="price" value="$"/><br/>
+              Price: <input type="text" name="price" value={Kicks.price}/><br/>
               <p><label for="description">Description:</label></p>               
               <textarea name="description" id="description" cols="30" rows="10" value=''></textarea><br />
               <input type="submit" name="" img="" value="Update Sneaker" className='buttons'/>

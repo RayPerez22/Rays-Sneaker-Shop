@@ -5,7 +5,7 @@ const kicksSchema = new mongoose.Schema({
     img: { type: String, required: true},
     stock: { type: Number, required: true},
     price: { type: String, required: true},
-    description: { type: String, required: false}
+    description: { type: String, required: true}
 })
 
 const Kicks = mongoose.model('Kicks', kicksSchema)

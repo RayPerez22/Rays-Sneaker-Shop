@@ -3,6 +3,10 @@ const React = require('react')
 class Index extends React.Component {
     render() {
         const { Kicks } = this.props
+        const imgstyle = {
+            width: "17vw",
+            position: "relative"
+        }
         return (
             <html lang="en">
             <head>              
@@ -21,7 +25,16 @@ class Index extends React.Component {
                                 <h3 className='sneakername'>{Kicks.name}</h3> 
                                 </div>
                                 <div>
-                                    <a href={`/Kicks/${Kicks.id}`}><img src={`${Kicks.img}`}></img></a>
+                                    <a href={`/Kicks/${Kicks.id}`}>
+                                        <div style={imgstyle}>
+                                        <img src={`${Kicks.img}`}></img>
+                                        {Kicks.stock ?
+                                        <h3 className='price-tag'>{Kicks.price}</h3>
+                                        : <h3 className='price-tag'>SOLD OUT</h3>
+                                        }
+                                        
+                                        </div>
+                                        </a>
                                 </div>
                                 <div className='buttons-div'>
                                     <div>
@@ -30,17 +43,11 @@ class Index extends React.Component {
                                     
                                     <div>
                                         <a href={`/Kicks/${Kicks.id}/edit`}><button className='buttons'>Edit</button></a> 
+
                                     </div>
-                                    
-                                    {Kicks.stock ?
-                                        <div>
-                                            <button className='buttons' id='buy-button'>BUY</button>
-                                            <div className='price'><h3>{Kicks.price}</h3></div>
-                                            
-                                        </div> :
-                                        <div className='index-oos'><h3>OUT OF STOCK</h3></div>
-                                        
-                                    }
+                                    <div>
+                                    <button className='buttons' id='buy-button'>BUY</button>
+                                    </div>
                                     
                                 </div>
                                 <div>
@@ -52,6 +59,7 @@ class Index extends React.Component {
                 </main>
                 <aside className="sidebar">
                     <a href="/Kicks/new" className="sidebar"><button className='buttons'>Create a new Sneaker</button></a>
+                    <p>Air Jordan is a line of basketball shoes and athletic clothing produced by American corporation Nike. The first Air Jordan shoe was produced for Hall of Fame former basketball player Michael Jordan during his time with the Chicago Bulls in late 1984 and released to the public on April 1, 1985. The shoes were designed for Nike by Peter Moore, Tinker Hatfield, and Bruce Kilgore.</p>
                     </aside>
                 <footer className="footer"></footer>
             </body>
