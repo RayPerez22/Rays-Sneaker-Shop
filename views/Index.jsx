@@ -51,7 +51,7 @@ class Index extends React.Component {
                     })}                
                 </main>
                 <aside className="sidebar">
-                    <a href="/Kicks/new" className="sidebar"><button>Create a new Sneaker</button></a>
+                    <a href="/Kicks/new" className="sidebar"><button className='buttons'>Create a new Sneaker</button></a>
                     </aside>
                 <footer className="footer"></footer>
             </body>

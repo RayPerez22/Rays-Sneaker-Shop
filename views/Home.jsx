@@ -10,7 +10,7 @@ class Home extends React.Component {
         <div class='home'>
             <h1>Ray's Sneakers Shop</h1>
         </div>
-        <div class='homebutton'>
+        <div id='homebutton' className='buttons'>
             <a href="/Kicks">Enter</a>
         </div>
       </html>

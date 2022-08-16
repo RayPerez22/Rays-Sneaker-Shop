@@ -34,7 +34,6 @@ class Show extends React.Component {
         <aside className="sidebar">
           <button><a href={`/kicks/`}>Back</a></button>
           <p id='description'>{kicks.description}</p>
-          {console.log(kicks.description)}
           </aside>
         <footer className="footer"></footer>
         </body>       

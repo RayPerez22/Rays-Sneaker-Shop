@@ -59,7 +59,7 @@ ul {
     height: 100%;
 }
 
-.homebutton {
+#homebutton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +91,6 @@ header {
     align-content: center;
 }
 
-/* CSS */
 .buttons {
     /* width: 4vw;
     height: 4vh; */
@@ -148,6 +147,7 @@ header {
 
 form {
     width: fit-content;
+    color: #000;
 }
 
 .price {
@@ -183,9 +183,14 @@ form {
     justify-content: center;
     position: relative;
     right: -2vw;
-    top: -26.5vh;
+    top: -28vh;
 }
 
 p {
     color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #41403e;
 }
