@@ -41,12 +41,7 @@ app.get('/Kicks/', (req, res) =>{
     })
 })
 
-//  seed
-app.get('/Kicks/seed', (req, res) => {
-    // Kicks.findByIdAndDelete{}
-    Kicks.create(kicksData)
-    res.redirect('/Kicks')
- })
+
 
 app.post('/Kicks/', (req, res) => {
     Kicks.create(req.body, (error, createdKicks) => {
