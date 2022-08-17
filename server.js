@@ -24,13 +24,6 @@ app.use((req, res, next) => {
     next();
  })
 
-//  seed
- app.get('/Kicks/seed', (req, res) => {
-    // Kicks.findByIdAndDelete{}
-    Kicks.create(kicksData)
-    res.redirect('/Kicks')
- })
-
 //setting up our views
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
@@ -41,13 +34,19 @@ app.get('/',(req, res) =>{
 })
 
 app.get('/Kicks/', (req, res) =>{
-    // res.render('Kicks')
     Kicks.find({}, (error, allKicks)=>{          
            res.render('Index', { 
             Kicks: allKicks
         })
     })
 })
+
+//  seed
+app.get('/Kicks/seed', (req, res) => {
+    // Kicks.findByIdAndDelete{}
+    Kicks.create(kicksData)
+    res.redirect('/Kicks')
+ })
 
 app.post('/Kicks/', (req, res) => {
     Kicks.create(req.body, (error, createdKicks) => {
@@ -106,6 +105,8 @@ app.put('/Kicks/:id', (req, res) => {
         res.redirect(`/Kicks/${req.params.id}`)
     })
 })
+
+
 
 app.listen(port, () => {
     console.log(`*** Listening on http://localhost:${port} ***`)

@@ -9,12 +9,13 @@ class New extends React.Component {
         </head>
         <body className="site">
         <header className="mastheader"><a href='/' className="mastheader" ><img src="/images/Logo.png" alt="" id='mastheader'/></a></header>
-          <h1 className="page-title">Ray's Sneakers Shop</h1>
+          <h1 className="page-title">New Sneaker</h1>
           <main className="main-content">
             <form action="/Kicks/" method="POST">
               Name: <input type="text" name="name" /><br/>
               Image URL: <input type="text" name="img"/><br/>
-              Stock: <select name="" id="">
+              Stock: <select name="stock" id="">
+                      <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>

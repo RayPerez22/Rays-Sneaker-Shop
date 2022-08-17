@@ -10,7 +10,7 @@ class Show extends React.Component {
         </head>
         <body className="site">
         <header className="mastheader"><a href='/' className="mastheader" ><img src="/images/Logo.png" alt="" id='mastheader'/></a></header>
-          <h1 className="page-title">Ray's Sneakers Shop</h1>
+          <h1 className="page-title">{kicks.name}</h1>
         <main className="main-content">
           <div className='product shoe'>
             <div className='sneakername'>
